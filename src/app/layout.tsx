@@ -1,0 +1,33 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "welcome to crypto ",
+  description: "A website for Crypto",
+  icons: {
+    icon: "/icon.svg",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${inter.className} antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
