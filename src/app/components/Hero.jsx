@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <>
       <main
-        className="flex justify-center  flex-col items-center w-full bg-cover bg-center relative"
+        className="flex justify-center flex-col items-center w-full bg-cover bg-center relative min-h-screen px-4 overflow-hidden"
         style={{
           backgroundImage: `
           radial-gradient(circle, #0169FF1F 100%, #ffffff 10%), 
@@ -18,11 +18,14 @@ export default function Hero() {
           backgroundRepeat: "no-repeat, no-repeat, no-repeat",
         }}
       >
-        <h1 className="font-bold text-[3.375rem] mt-28 text-[#0D0D0D] text-center  space-x-1 leading-[120%] pt-9">
-          CRYPTO <span className="text-[#039FF1]"> MADE</span> SIMPLE{" "}
+        {/* Responsive Heading */}
+        <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] xl:text-[3.25rem] 2xl:text-[3.375rem] text-[#0D0D0D] text-center leading-[120%] pt-20 sm:pt-28 md:pt-36 lg:pt-40 xl:pt-44 max-w-5xl tracking-wide">
+          CRYPTO <span className="text-[#039FF1]"> MADE</span> SIMPLE
           <span className="text-[#039FF1]"> !!</span>
         </h1>
-        <div className="flex  ms-auto me-auto flex-wrap gap-4 pt-10">
+
+        {/* Responsive Button Grid/Flex */}
+        <div className="flex justify-center items-center flex-wrap gap-3 sm:gap-4 pt-6 sm:pt-8 md:pt-10 max-w-xl mx-auto">
           <Button
             content={"Early Bird"}
             width={"120px"}
@@ -36,17 +39,24 @@ export default function Hero() {
           />
           <Button content={"Video"} width={"93px"} background={"#8537B6"} />
         </div>
-        <div className="pt-10">
-          <Image
-            src={"/img/Picture Home.png"}
-            alt="hero images "
-            priority
-            className="object-cover"
-            width={400}
-            height={138}
-          />
+
+        {/* Responsive Image Container */}
+        <div className="pt-8 sm:pt-10 pb-24 md:pb-32 w-full flex justify-center z-10">
+          <div className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] lg:max-w-[450px] xl:max-w-[500px]">
+            <Image
+              src={"/img/Picture Home.png"}
+              alt="hero images"
+              priority
+              layout="responsive"
+              width={400}
+              height={138}
+              className="object-contain"
+            />
+          </div>
         </div>
-        <div className="w-full h-35 bg-linear-to-t from-[#ffffff] via-[#ffffff]/50 to-[#ffffff]/0 absolute bottom-0"></div>
+
+        {/* Bottom Fade Overlay */}
+        <div className="w-full h-24 sm:h-35 bg-linear-to-t from-[#ffffff] via-[#ffffff]/50 to-[#ffffff]/0 absolute bottom-0 pointer-events-none"></div>
       </main>
     </>
   );

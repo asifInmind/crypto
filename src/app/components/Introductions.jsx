@@ -13,29 +13,46 @@ export default function Introductions({
   return (
     <>
       <section
-        className={`flex flex-col md:flex-row justify-center  items-center h-175 w-266 ms-auto me-auto ${
-          isReverse ? "md:flex-row-reverse gap-12" : ""
+        className={`flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto px-4 py-12 md:py-24 gap-8 md:gap-12 lg:gap-16 ${
+          isReverse ? "md:flex-row-reverse" : ""
         }`}
       >
-        <div className=" w-full ms-auto me-auto md:w-[50%]">
-          <span className="w-25.4 h-7 py-2 px-3 bg-[#b7f3f583] rounded-[38px] text-black">
+        {/* Text Section */}
+        <div className="w-full md:w-[50%] flex flex-col items-start text-start">
+          {/* Badge indicator */}
+          <span className="inline-block py-1.5 px-4 bg-[#b7f3f583] rounded-[38px] text-black font-medium text-sm mb-4">
             {text}
           </span>
-          <h1 className="font-semibold text-[48px] leading-14 py-6">
+
+          {/* Dynamic Responsive Heading */}
+          <h1 className="font-semibold text-3xl sm:text-4xl md:text-[40px] lg:text-[48px] leading-[1.2] md:leading-14 pb-5 text-[#0D0D0D]">
             <span className="bg-[linear-gradient(to_right,#E117FC,#955AF2)] bg-clip-text text-transparent">
               {title1}
-            </span>
-
-            {title2}
+            </span>{" "}
+            {title2}{" "}
             <span className="bg-[linear-gradient(to_right,#E117FC,#955AF2)] bg-clip-text text-transparent">
-              {" "}
               {title3}
             </span>
           </h1>
-          <p className="font-normal text-[18px] w-125 text-justify">{para}</p>
+
+          {/* Responsive Paragraph Wrapper */}
+          <p className="font-normal text-base sm:text-[18px] text-gray-700 md:text-justify max-w-xl leading-relaxed">
+            {para}
+          </p>
         </div>
-        <div className="w-full ms-auto me-auto md:w-[50%] flex justify-center items-center">
-          <Image src={image} alt="intro image" />
+
+        {/* Image Section */}
+        <div className="w-full md:w-[50%] flex justify-center items-center mt-6 md:mt-0">
+          <div className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-full">
+            <Image
+              src={image}
+              alt="intro image"
+              width={550}
+              height={450}
+              priority
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
       </section>
     </>

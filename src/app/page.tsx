@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Introductions from "./components/Introductions";
 import image1 from "../../public/img/Blue Cartoon Bitcoin.H02.2k 1.png";
 import image2 from "../../public/img/Blue Cartoon Bitcoin.H02.2k 1 (1).png";
-import Banner from "./components/Banner";
+
 export default function Home() {
   const content = [
     {
@@ -25,7 +25,7 @@ that everyone, regardless of financial background or expertise, deserves the cha
   ];
   return (
     <>
-      <main className="   mx-auto">
+      <main className="mx-auto">
         <Hero />
         <Introductions
           text={content[0].text}
@@ -44,7 +44,6 @@ that everyone, regardless of financial background or expertise, deserves the cha
           para={content[1].para}
           isReverse={true}
         />
-        <Banner />
       </main>
     </>
   );
