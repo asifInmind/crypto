@@ -6,7 +6,7 @@ export default function Banner() {
     <>
       <section className="w-full px-4 mb-16 md:mb-24">
         {/* Main Banner Card */}
-        <div className="flex flex-col lg:flex-row gap-8 justify-center items-center max-w-7xl mx-auto h-auto min-h-[500px] bg-linear-to-r from-[#d0f9fd] via-[#fdfdfd] to-[#f0d3f2] rounded-3xl p-6 sm:p-10 lg:p-0 overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-8 justify-center items-center max-w-7xl mx-auto h-auto min-h-125 bg-linear-to-r from-[#d0f9fd] via-[#fdfdfd] to-[#f0d3f2] rounded-3xl p-6 sm:p-10 lg:p-0 overflow-hidden">
           {/* Left Content Column */}
           <div className="w-full lg:w-[50%] lg:pl-12 xl:pl-16 flex flex-col justify-center">
             <h1 className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[54px] leading-[120%] mb-3 text-[#0D0D0D]">
@@ -55,13 +55,14 @@ export default function Banner() {
           </div>
 
           {/* Right Image Column */}
-          <div className="w-full border border-amber-950 h-auto md:w-[50%] relative md:h-125">
+          {/* Right Image Column */}
+          <div className="w-full h-auto md:w-[90%] md:mx-auto relative lg:h-125">
             <Image
               src={"/img/mobiles-v1 1.png"}
               alt="banner image "
               width={550}
               height={250}
-              className="absolute bottom-0 right-14"
+              className="relative mx-auto mt-6 lg:mt-0 lg:absolute lg:bottom-0 lg:right-6 xl:right-14"
             />
           </div>
         </div>

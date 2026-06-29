@@ -13,7 +13,7 @@ export default function Introductions({
   return (
     <>
       <section
-        className={`flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto px-4 py-12 md:py-24 gap-8 md:gap-12 lg:gap-16 ${
+        className={`flex flex-col lg:flex-row  justify-between items-center w-full lg:w-4xl max-w-7xl mx-auto px-4 py-12 md:py-24 gap-8 md:gap-12 lg:gap-16 ${
           isReverse ? "md:flex-row-reverse" : ""
         }`}
       >
@@ -43,14 +43,14 @@ export default function Introductions({
 
         {/* Image Section */}
         <div className="w-full md:w-[50%] flex justify-center items-center mt-6 md:mt-0">
-          <div className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-full">
+          <div className="w-full max-w-[320px] sm:max-w-100 md:max-w-full">
             <Image
               src={image}
               alt="intro image"
-              width={550}
+              width={450}
               height={450}
               priority
-              className="w-full h-auto object-contain"
+              className=" h-auto object-contain"
             />
           </div>
         </div>

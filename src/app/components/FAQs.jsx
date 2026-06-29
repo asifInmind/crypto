@@ -68,7 +68,7 @@ export default function FAQs() {
         </section>
 
         {/* Mapped FAQ Sections List Container */}
-        <section className="w-full max-w-4xl mx-auto flex flex-col gap-1">
+        <section className="w-full max-w-6xl mx-auto flex flex-col gap-1">
           {faqs.map((faq) => (
             <FAQSection key={faq.id} faqs={faq} /> // FIXED: Added unique item key parameter
           ))}

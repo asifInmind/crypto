@@ -77,7 +77,7 @@ export default function Footer() {
 
         {/* Footer Bottom Copyright Notice */}
         <div className="w-full max-w-7xl mx-auto border-t border-gray-100 pt-6 text-center md:text-left">
-          <p className="text-gray-400 font-normal text-sm">
+          <p className="text-gray-400 font-normal text-sm text-center">
             Copyright © 2026 CSC base
           </p>
         </div>
